@@ -445,6 +445,7 @@ function validationUserName() {
   if (regex.test($("#userName").val()) == true) {
     $("#warningName").html("");
     $("#warningName").css("background-color", "transparent");
+return true;
   } else {
     $("#warningName").html("Enter a valid Username");
     $("#warningName").css("background-color", "white");
@@ -462,6 +463,7 @@ function validationEmail() {
   if (regex.test($("#email").val()) == true) {
     $("#warningMail").html("");
     $("#warningMail").css("background-color", "transparent");
+return true;
   } else {
     $("#warningMail").html("Enter a valid E-mail");
     $("#warningMail").css("background-color", "white");
@@ -477,6 +479,7 @@ function validationPhone() {
   if (regex.test($("#Phone").val()) == true) {
     $("#warningPhone").html("");
     $("#warningPhone").css("background-color", "transparent");
+return true;
   } else {
     $("#warningPhone").html("Enter a valid Phone number");
     $("#warningPhone").css("background-color", "white");
@@ -491,6 +494,7 @@ function validationUserAge() {
   if (regex.test($("#age").val()) == true) {
     $("#warningAge").html("");
     $("#warningAge").css("background-color", "transparent");
+return true;
   } else {
     $("#warningAge").html("Age is not valid");
     $("#warningAge").css("background-color", "white");
