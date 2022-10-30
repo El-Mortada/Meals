@@ -546,9 +546,10 @@ function enableBtn() {
     validationUserAge() == true &&
     validationUserPass() == true
   ) {
-    $("#disBtn").addClass("disabled");
+$("#disBtn").removeClass("disabled");
+    
   } else {
-    $("#disBtn").removeClass("disabled");
+    $("#disBtn").addClass("disabled");
   }
 }
 
