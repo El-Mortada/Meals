@@ -528,7 +528,7 @@ function validationPasswordMatch() {
   if ($("#password").val() == $("#rePass").val()) {
     $("#warningRepass").html("");
     $("#warningRepass").css("background-color", "transparent");
-    enableBtn();
+    return true;
   } else {
     $("#warningRepass").html("Password Doesn't match");
     $("#warningRepass").css("background-color", "white");
@@ -537,6 +537,7 @@ function validationPasswordMatch() {
 }
 $("#rePass").on("input", function () {
   validationPasswordMatch(this.value);
+  enableBtn();
 });
 function enableBtn() {
   if (
@@ -544,7 +545,8 @@ function enableBtn() {
     validationEmail() == true &&
     validationPhone() == true &&
     validationUserAge() == true &&
-    validationUserPass() == true
+    validationUserPass() == true &&
+    validationPasswordMatch() == true
   ) {
 $("#disBtn").removeClass("disabled");
     
