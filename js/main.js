@@ -453,7 +453,7 @@ return true;
   }
 }
 
-$("#userName").blur(function () {
+$("#userName").on("input",function () {
   validationUserName(this.value);
 });
 
@@ -470,7 +470,7 @@ return true;
     $("#disBtn").addClass("disabled");
   }
 }
-$("#email").blur(function () {
+$("#email").on("input",function () {
   validationEmail(this.value);
 });
 
@@ -486,7 +486,7 @@ return true;
     $("#disBtn").addClass("disabled");
   }
 }
-$("#Phone").blur(function () {
+$("#Phone").on("input",function () {
   validationPhone(this.value);
 });
 function validationUserAge() {
@@ -537,7 +537,6 @@ function validationPasswordMatch() {
 }
 $("#rePass").on("input", function () {
   validationPasswordMatch(this.value);
-  enableBtn();
 });
 function enableBtn() {
   if (
@@ -554,7 +553,9 @@ $("#disBtn").removeClass("disabled");
     $("#disBtn").addClass("disabled");
   }
 }
-
+$(".formInputs input").on("input", function () {
+  enableBtn();
+});
 $("document").ready(function () {
   $("#loading").fadeOut(1000, function () {
     $("#loading").remove();
