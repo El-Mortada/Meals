@@ -510,7 +510,7 @@ function validationUserPass() {
     return true;
   } else {
     $("#warningPassword").html(
-      "Enter valid password Minimum eight characters, at least one letter and one number"
+      "Enter valid password Minimum eight characters, at least one letter and one number and one special character"
     );
     $("#warningPassword").css("background-color", "white");
     $("#disBtn").addClass("disabled");
