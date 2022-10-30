@@ -449,7 +449,6 @@ return true;
   } else {
     $("#warningName").html("Enter a valid Username");
     $("#warningName").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
   }
 }
 
@@ -467,7 +466,6 @@ return true;
   } else {
     $("#warningMail").html("Enter a valid E-mail");
     $("#warningMail").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
   }
 }
 $("#email").on("input",function () {
@@ -483,7 +481,6 @@ return true;
   } else {
     $("#warningPhone").html("Enter a valid Phone number");
     $("#warningPhone").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
   }
 }
 $("#Phone").on("input",function () {
@@ -498,7 +495,6 @@ return true;
   } else {
     $("#warningAge").html("Age is not valid");
     $("#warningAge").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
   }
 }
 
@@ -517,7 +513,7 @@ function validationUserPass() {
       "Enter valid password Minimum eight characters, at least one letter and one number and one special character"
     );
     $("#warningPassword").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
+   
   }
 }
 
@@ -532,7 +528,6 @@ function validationPasswordMatch() {
   } else {
     $("#warningRepass").html("Password Doesn't match");
     $("#warningRepass").css("background-color", "white");
-    $("#disBtn").addClass("disabled");
   }
 }
 $("#rePass").on("input", function () {
